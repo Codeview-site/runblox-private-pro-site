@@ -1,0 +1,52 @@
+<!-- CSS -->
+<style>
+.green_window {
+    display: inline-block;
+    width: 366px; height: 34px;
+    border: 3px solid #200400;
+    background: white;
+}
+.input_text {
+    width: 348px; height: 21px;
+    margin: 6px 0 0 9px;
+    border: 0;
+    line-height: 21px;
+    font-weight: bold;
+    font-size: 16px;
+    outline: none;
+}
+.sch_smit {
+    width: 54px; height: 40px;
+    margin: 0; border: 0;
+    vertical-align: top;
+    background: #200400;
+    color: white;
+    font-weight: bold;
+    border-radius: 1px;
+    cursor: pointer;
+}
+.sch_smit:hover {
+    background: #56C82C;
+}
+</style>
+<!-- HTML -->
+<meta charset="utf-8">
+<center>
+    <h2>Runblox 검색</h2>
+    <h4>Roblox 게임을 검색하려면 아래의 검색창에 검색어를 입력하세요.</h4>
+<span class='green_window'>
+<input id=text type="text" class='input_text' name="search" onkeydown="enterSearch()"/></span>
+<input type="button" class='sch_smit' value="검색" onclick="myFunction()"/>
+<!-- JAVASCRIPT -->
+<script type="text/javascript">
+function enterSearch() {
+    if(event.keyCode == 13){
+        myFunction();  // 실행할 이벤트
+    }
+}
+function myFunction() {
+    var x = document.getElementById("text").value;
+     window.location.href = "https://www.roblox.com/discover/?keyword="+x;
+}
+</script>
+</center>
